@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  iis-web:
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2022
+    deploy:
+      placement:
+        constraints:
+          - "node.platform.os==windows"
+          - "node.platform.arch==x86_64"
+      replicas: 1
+    networks:
+      - proxy-public
+networks:
+  proxy-public:
+    external: true

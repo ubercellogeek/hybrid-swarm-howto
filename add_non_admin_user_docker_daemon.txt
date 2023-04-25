@@ -1,0 +1,4 @@
+https://www.axians-infoma.de/techblog/allow-access-to-the-docker-engine-without-admin-rights-on-windows/
+
+PS C:\Windows\system32> Import-Module dockeraccesshelper
+PS C:\Windows\system32> Add-AccountToDockerAccess "FUM-GLOBAL\TFENSTER"
